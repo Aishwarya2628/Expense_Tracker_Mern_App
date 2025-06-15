@@ -16,14 +16,12 @@ const port = process.env.PORT;
 
 connectDB();
 
-
-  const allowedOrigins = [
-    "http://localhost:3000", 
+const allowedOrigins = [
   
-  // ✅ Add this line
+  "https://lively-kheer-bd4dc0.netlify.app",
+   "http://localhost:3000"
+  // add more origins as needed
 ];
-
-
 
 // Middleware
 app.use(express.json());
@@ -49,5 +47,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server is listening on http://localhost:${port}`);
+  console.log(`Server is listening on  https://expense-tracker-mern-app-a8o1.onrender.com:${port}`);
 });
